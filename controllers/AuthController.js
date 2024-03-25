@@ -23,7 +23,6 @@ class AuthController {
             if(password.length < 6) { throw {code: 400, message: 'Password must be at least 6 characters'} }; 
             
             const isEmailExist = await emailExist(email);
-            console.log(isEmailExist)
             if(isEmailExist) { throw {code: 400, message: 'Email already exists'} }
 
             const salt = await bcrypt.genSalt(10);
