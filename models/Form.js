@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import mongoosePaginate from "mongoose-paginate-v2";
 
-const Schema = new mongoose.Schema(
+const Schema = mongoose.Schema(
  {
   userId: {
    type: mongoose.Schema.Types.ObjectId,
